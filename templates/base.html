@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>College Website</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="/" class="btn-nav">Home</a>
+  <a href="/signup" class="btn-nav">Sign Up</a>
+  <a href="/login" class="btn-nav">Login</a>
+  <!-- You can later show Dashboard/Logout buttons using JS if user is logged in -->
+</nav>
+
+<!-- Main container -->
+<main class="container">
+  <!-- Flash messages can be handled by JS alert or a div you populate via JS -->
+  <div id="flash-container"></div>
+
+  <!-- Page content goes here -->
+  <div id="page-content">
+    <!-- Each page HTML will be inserted here directly -->
+  </div>
+</main>
+
+<script src="/static/script.js"></script>
+<script>
+  // Example: display a flash message (if needed)
+  function showFlashMessage(message, category="info") {
+      const flashDiv = document.createElement("div");
+      flashDiv.className = "flash " + category;
+      flashDiv.textContent = message;
+      document.getElementById("flash-container").appendChild(flashDiv);
+      setTimeout(() => flashDiv.remove(), 5000); // auto-remove after 5s
+  }
+</script>
+
+</body>
+</html>

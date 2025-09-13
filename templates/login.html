@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - College Website</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="/" class="btn-nav">Home</a>
+  <a href="/signup" class="btn-nav">Sign Up</a>
+  <a href="/login" class="btn-nav">Login</a>
+</nav>
+
+<!-- Main container -->
+<div class="container">
+  <h2>Login</h2>
+  <form method="POST" action="/login">
+    <label>Username or Email</label>
+    <input type="text" name="username" required>
+
+    <label>Password</label>
+    <input type="password" name="password" required>
+
+    <button type="submit">Login</button>
+  </form>
+  <p style="margin-top:15px;">
+    Don't have an account? <a href="/signup">Sign Up</a>
+  </p>
+</div>
+
+</body>
+</html>

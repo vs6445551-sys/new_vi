@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - College Website</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js"></script> <!-- optional if you have validateSignup() -->
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="/" class="btn-nav">Home</a>
+  <a href="/signup" class="btn-nav">Sign Up</a>
+  <a href="/login" class="btn-nav">Login</a>
+</nav>
+
+<!-- Main container -->
+<div class="container">
+  <h2>Create an Account</h2>
+  <form method="POST" action="/signup" onsubmit="return validateSignup();">
+    <label>Username</label>
+    <input type="text" name="username" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Password</label>
+    <input type="password" name="password" id="password" required>
+
+    <label>Confirm Password</label>
+    <input type="password" name="confirm" id="confirm" required>
+
+    <button type="submit">Sign Up</button>
+  </form>
+  <p style="margin-top:15px;">
+    Already have an account? <a href="/login">Login here</a>.
+  </p>
+</div>
+
+</body>
+</html>
+
